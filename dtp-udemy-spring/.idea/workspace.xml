@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96df0b74-72eb-40a3-a35d-7d27d30e0689" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/dtp-udemy-spring.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/DtpUdemySpringApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/controllers/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/model/Greeting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/charlesscarvalhoo/DtpUdemySpringApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="96df0b74-72eb-40a3-a35d-7d27d30e0689" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
