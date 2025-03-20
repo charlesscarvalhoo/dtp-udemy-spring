@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96df0b74-72eb-40a3-a35d-7d27d30e0689" name="Changes" comment="" />
+    <list default="true" id="96df0b74-72eb-40a3-a35d-7d27d30e0689" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/controllers/PersonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/model/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/services/PersonServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/controllers/GreetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/model/Greeting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/charlesscarvalhoo/controllers/GreetingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/charlesscarvalhoo/model/Greeting.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
