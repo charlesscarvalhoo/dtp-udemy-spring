@@ -1,9 +1,9 @@
 package br.com.charlesscarvalhoo.services;
 
+import br.com.charlesscarvalhoo.Exceptions.ResourceNotFoundException;
 import br.com.charlesscarvalhoo.model.Person;
+import br.com.charlesscarvalhoo.repository.PersonRepository;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Logger;
@@ -12,67 +12,60 @@ import java.util.logging.Logger;
 public class PersonServices {
 
     private final AtomicLong counter = new AtomicLong();
-
     private Logger logger = Logger.getLogger(PersonServices.class.getName());
 
-    public List<Person> findAll(){
+    PersonRepository repository;
 
-        logger.info("Finding All People ");
-
-        List<Person> persons = new ArrayList<>();
-        for(int i = 0; i < 8; i++){
-            Person person = mockPerson(i);
-            persons.add(person);
-        }
-        return persons;
-    }
-
-
-    public Person findById(String id){
-
-        logger.info("Finding a Person !");
-
-        Person person = new Person();
-        person.setId(counter.incrementAndGet());
-        person.setFirstName("Charles");
-        person.setLastName("Carvalho");
-        person.setAddress("Rua 1");
-        person.setGender("Masculino");
-
-        return person;
+    public PersonServices(PersonRepository repository){
+        this.repository = repository;
     }
 
     public Person create(Person person){
 
         logger.info("Creating a Person");
 
+        repository.save(person);
+
         return person;
     }
 
+    public List<Person> findAll(){
 
-    public void delete(String id){
+        logger.info("Finding All People ");
 
-        logger.info("Deleting a Person");
+        return repository.findAll();
+    }
 
+    public Person findById(Long id){
+
+        logger.info("Finding a Person !");
+
+        return repository.findById(id)
+              .orElseThrow(() -> new ResourceNotFoundException("User not found!"));
     }
 
     public Person update(Person person){
 
         logger.info("Updating a Person");
-        return person;
+
+        Person founded = repository.findById(person.getId())
+                .orElseThrow(() -> new ResourceNotFoundException("User not found!"));
+
+        founded.setFirstName(person.getFirstName());
+        founded.setLastName(person.getLastName());
+        founded.setAddress(person.getAddress());
+        founded.setGender(person.getGender());
+
+        return repository.save(founded);
     }
 
+    public void delete(Long id){
 
-    private Person mockPerson(int i) {
+        logger.info("Deleting a Person");
 
-        Person person = new Person();
-        person.setId(counter.incrementAndGet());
-        person.setFirstName("First Name " + i);
-        person.setLastName("Last Name " + i);
-        person.setAddress("Some Address in Brazil");
-        person.setGender("Male");
+        Person founded = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found!"));
 
-        return person;
+        repository.delete(founded);
     }
-
 }
