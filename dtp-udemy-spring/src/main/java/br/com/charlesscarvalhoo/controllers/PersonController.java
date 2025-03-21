@@ -3,8 +3,11 @@ package br.com.charlesscarvalhoo.controllers;
 import br.com.charlesscarvalhoo.model.Person;
 import br.com.charlesscarvalhoo.services.PersonServices;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -17,37 +20,34 @@ public class PersonController {
         this.services = services;
     }
 
-    @RequestMapping(value = "/{id}",
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    public Person findById(@PathVariable("id") Long id){
-        return services.findById(id);
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Person> create(@RequestBody Person person, UriComponentsBuilder uriBuilder){
+        Person created = services.create(person);
+        URI uri = uriBuilder.path("/person/{id}").buildAndExpand(created.getId()).toUri();
+        return ResponseEntity.created(uri).body(created);
     }
 
-    @RequestMapping(value = "/all",
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Person> findAll(){
-        return services.findAll();
+    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Person> findById(@PathVariable("id") Long id){
+        Person founded = services.findById(id);
+        return ResponseEntity.ok(founded);
     }
 
-    @RequestMapping(method = RequestMethod.POST,
-            produces = MediaType.APPLICATION_JSON_VALUE,
-            consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Person create(@RequestBody Person person){
-        return services.create(person);
+    @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Person>> findAll(){
+        List<Person> founded = services.findAll();
+        return ResponseEntity.ok(founded);
     }
 
-    @RequestMapping(method = RequestMethod.PUT,
-            produces = MediaType.APPLICATION_JSON_VALUE,
-            consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Person update(@RequestBody Person person){
-        return services.update(person);
+    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Person> update(@RequestBody Person person){
+        Person updated = services.update(person);
+        return ResponseEntity.ok(updated);
     }
 
-    @RequestMapping(value = "/{id}",
-            method = RequestMethod.DELETE)
-    public void delete(@PathVariable("id") Long id){
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") Long id){
         services.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }
