@@ -1,18 +1,24 @@
 package br.com.charlesscarvalhoo.services;
 
 import br.com.charlesscarvalhoo.Exceptions.ResourceNotFoundException;
+import br.com.charlesscarvalhoo.controllers.TestLogController;
+import br.com.charlesscarvalhoo.data.dto.PersonDTO;
+import br.com.charlesscarvalhoo.mapper.ObjectMapper;
 import br.com.charlesscarvalhoo.model.Person;
 import br.com.charlesscarvalhoo.repository.PersonRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.logging.Logger;
+
+import static br.com.charlesscarvalhoo.mapper.ObjectMapper.parseListObjects;
+import static br.com.charlesscarvalhoo.mapper.ObjectMapper.parseObject;
 
 @Service
 public class PersonServices {
 
-    private final AtomicLong counter = new AtomicLong();
-    private Logger logger = Logger.getLogger(PersonServices.class.getName());
+    private final Logger logger = LoggerFactory.getLogger(PersonServices.class.getName());
 
     PersonRepository repository;
 
@@ -20,43 +26,44 @@ public class PersonServices {
         this.repository = repository;
     }
 
-    public Person create(Person person){
+    public PersonDTO create(PersonDTO personDTO){
 
         logger.info("Creating a Person");
 
-        repository.save(person);
-
-        return person;
+        Person person = parseObject(personDTO, Person.class);
+        return parseObject(repository.save(person), PersonDTO.class);
     }
 
-    public List<Person> findAll(){
+    public List<PersonDTO> findAll(){
 
         logger.info("Finding All People ");
 
-        return repository.findAll();
+        return parseListObjects(repository.findAll(), PersonDTO.class);
     }
 
-    public Person findById(Long id){
+    public PersonDTO findById(Long id){
 
         logger.info("Finding a Person !");
 
-        return repository.findById(id)
+        Person person = repository.findById(id)
               .orElseThrow(() -> new ResourceNotFoundException("User not found!"));
+
+        return parseObject(person,PersonDTO.class);
     }
 
-    public Person update(Person person){
+    public PersonDTO update(PersonDTO personDTO){
 
         logger.info("Updating a Person");
 
-        Person founded = repository.findById(person.getId())
+        Person person = repository.findById(personDTO.getId())
                 .orElseThrow(() -> new ResourceNotFoundException("User not found!"));
 
-        founded.setFirstName(person.getFirstName());
-        founded.setLastName(person.getLastName());
-        founded.setAddress(person.getAddress());
-        founded.setGender(person.getGender());
+        person.setFirstName(personDTO.getFirstName());
+        person.setLastName(personDTO.getLastName());
+        person.setAddress(personDTO.getAddress());
+        person.setGender(personDTO.getGender());
 
-        return repository.save(founded);
+        return parseObject(repository.save(person), PersonDTO.class);
     }
 
     public void delete(Long id){

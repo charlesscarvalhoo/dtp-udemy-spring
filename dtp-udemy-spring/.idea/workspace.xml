@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96df0b74-72eb-40a3-a35d-7d27d30e0689" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/controllers/TestLogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/data/dto/PersonDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/mapper/ObjectMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/charlesscarvalhoo/unittests/mapper/ObjectMapperTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/charlesscarvalhoo/unittests/mapper/mocks/MockPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/controllers/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/services/PersonServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/services/PersonServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
     </list>
@@ -35,20 +42,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DtpUdemySpringApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.dtp-udemy-spring [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/dtp-udemy-spring/dtp-udemy-spring/src/test&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DtpUdemySpringApplication.executor": "Run",
+    "JUnit.ObjectMapperTests.executor": "Run",
+    "Maven.dtp-udemy-spring [clean].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/dtp-udemy-spring/dtp-udemy-spring/src/test"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dtp-udemy-spring\dtp-udemy-spring\src\test" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.charlesscarvalhoo.data.dto" />
     </key>
   </component>
   <component name="RunManager">
@@ -65,8 +76,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ObjectMapperTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dtp-udemy-spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.charlesscarvalhoo.unittests.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.charlesscarvalhoo.unittests.mapper" />
+      <option name="MAIN_CLASS_NAME" value="br.com.charlesscarvalhoo.unittests.mapper.ObjectMapperTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ObjectMapperTests" />
         <item itemvalue="Application.DtpUdemySpringApplication" />
       </list>
     </recent_temporary>
