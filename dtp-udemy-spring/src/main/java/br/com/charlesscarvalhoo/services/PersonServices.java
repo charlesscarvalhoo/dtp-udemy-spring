@@ -1,16 +1,14 @@
 package br.com.charlesscarvalhoo.services;
 
 import br.com.charlesscarvalhoo.Exceptions.ResourceNotFoundException;
-import br.com.charlesscarvalhoo.controllers.TestLogController;
-import br.com.charlesscarvalhoo.data.dto.PersonDTO;
-import br.com.charlesscarvalhoo.mapper.ObjectMapper;
+import br.com.charlesscarvalhoo.data.dto.V1.PersonDTO;
 import br.com.charlesscarvalhoo.model.Person;
 import br.com.charlesscarvalhoo.repository.PersonRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
 import static br.com.charlesscarvalhoo.mapper.ObjectMapper.parseListObjects;
 import static br.com.charlesscarvalhoo.mapper.ObjectMapper.parseObject;

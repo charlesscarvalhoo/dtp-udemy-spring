@@ -1,7 +1,6 @@
 package br.com.charlesscarvalhoo.controllers;
 
-import br.com.charlesscarvalhoo.data.dto.PersonDTO;
-import br.com.charlesscarvalhoo.model.Person;
+import br.com.charlesscarvalhoo.data.dto.V1.PersonDTO;
 import br.com.charlesscarvalhoo.services.PersonServices;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +11,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/api/person/v1")
 public class PersonController {
 
     private final PersonServices services;

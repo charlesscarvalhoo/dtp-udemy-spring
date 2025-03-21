@@ -1,4 +1,4 @@
-package br.com.charlesscarvalhoo.data.dto;
+package br.com.charlesscarvalhoo.data.dto.V1;
 
 import java.io.Serial;
 import java.io.Serializable;

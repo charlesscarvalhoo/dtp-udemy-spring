@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96df0b74-72eb-40a3-a35d-7d27d30e0689" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/controllers/TestLogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/data/dto/PersonDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/mapper/ObjectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/charlesscarvalhoo/unittests/mapper/ObjectMapperTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/charlesscarvalhoo/unittests/mapper/mocks/MockPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_Table_Person.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Populate_Table_Person.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/controllers/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/controllers/TestLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/controllers/TestLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/data/dto/PersonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/data/dto/V1/PersonDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/services/PersonServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/charlesscarvalhoo/services/PersonServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/charlesscarvalhoo/unittests/mapper/ObjectMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/charlesscarvalhoo/unittests/mapper/ObjectMapperTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/charlesscarvalhoo/unittests/mapper/mocks/MockPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/charlesscarvalhoo/unittests/mapper/mocks/MockPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,14 +52,16 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/dtp-udemy-spring/dtp-udemy-spring/src/test"
+    "last_opened_file_path": "C:/dtp-udemy-spring/dtp-udemy-spring/src/main/resources/db/migration"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dtp-udemy-spring\dtp-udemy-spring\src\main\resources\db\migration" />
       <recent name="C:\dtp-udemy-spring\dtp-udemy-spring\src\test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.charlesscarvalhoo.data.dto.V2" />
       <recent name="br.com.charlesscarvalhoo.data.dto" />
     </key>
   </component>

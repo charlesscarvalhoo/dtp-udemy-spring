@@ -1,6 +1,6 @@
 package br.com.charlesscarvalhoo.unittests.mapper.mocks;
 
-import br.com.charlesscarvalhoo.data.dto.PersonDTO;
+import br.com.charlesscarvalhoo.data.dto.V1.PersonDTO;
 import br.com.charlesscarvalhoo.model.Person;
 
 import java.util.ArrayList;
